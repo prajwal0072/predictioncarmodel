@@ -8,7 +8,8 @@ model = pk.load(open('ocarmodel.pkl', 'rb'))
 st.header('Car Price Prediction ML Model')
 
 # Load car dataset
-cars_data = pd.read_csv(r'C:\Users\PRAJWAL\OneDrive\Desktop\project\realcar.csv')
+cars_data = pd.read_csv('realcar.csv')
+
 
 # Extract brand name from car name
 def get_brand_name(car_name):
@@ -62,3 +63,4 @@ if st.button("Predict"):
 
     # Display result
     st.success(f"Predicted Car Price: ₹ {car_price[0]:,.2f}")
+
